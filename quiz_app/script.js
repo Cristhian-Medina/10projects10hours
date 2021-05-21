@@ -1,5 +1,5 @@
 const quizData = [{
-        question: "What is the most used programming language in 2019?",
+        question: "What is the most used programming language in 2020?",
         a: "Java",
         b: "C",
         c: "Python",
@@ -32,20 +32,30 @@ const quizData = [{
     },
 ];
 
-const quiz = document.getElementById("quiz");
-const answerEls = document.querySelectorAll(".answer");
+const card = document.getElementsByClassName("card");
+const answerEls = document.querySelectorAll(".card-answers");
 const questionEl = document.getElementById("question");
-const a_text = document.getElementById("a_text");
-const b_text = document.getElementById("b_text");
-const c_text = document.getElementById("c_text");
-const d_text = document.getElementById("d_text");
+const a_text = document.getElementById("answer-a");
+const b_text = document.getElementById("answer-b");
+const c_text = document.getElementById("answer-c");
+const d_text = document.getElementById("answer-d");
 const submitBtn = document.getElementById("submit");
 
 let currentQuiz = 0;
 let score = 0;
 
-loadQuiz();
+/**
+ * Esta función deselecciona todas las respuestas al iniciar una nueva pregunta.
+ */
+function deselectAnswers() {
+    answerEls.forEach((answerEl) => {
+        answerEl.checked = false;
+    });
+}
 
+/**
+ * Esta función carga la pregunta y sus posibles respuestas en la tarjeta.
+ */
 function loadQuiz() {
     deselectAnswers();
 
@@ -58,6 +68,10 @@ function loadQuiz() {
     d_text.innerText = currentQuizData.d;
 }
 
+/**
+ * Esta función revisa cual es la respuesta seleccionada.
+ * @returns {string} Retorna la respuesta seleccionada
+ */
 function getSelected() {
     let answer = undefined;
 
@@ -70,14 +84,10 @@ function getSelected() {
     return answer;
 }
 
-function deselectAnswers() {
-    answerEls.forEach((answerEl) => {
-        answerEl.checked = false;
-    });
-}
+loadQuiz();
 
+/** */
 submitBtn.addEventListener("click", () => {
-    // check to see the answer
     const answer = getSelected();
 
     if (answer) {
@@ -89,10 +99,13 @@ submitBtn.addEventListener("click", () => {
         if (currentQuiz < quizData.length) {
             loadQuiz();
         } else {
-            quiz.innerHTML = `
-                <h2>You answered correctly at ${score}/${quizData.length} questions.</h2>
-                
-                <button onclick="location.reload()">Reload</button>
+            card[0].innerHTML = `
+                <div class="card-body">
+                    <h3 class="card-question">
+                        You answered correctly at ${score}/${quizData.length} questions.
+                    </h3>
+                </div>
+                <button class="card-btn" onclick="location.reload()">Reload</button>
             `;
         }
     }

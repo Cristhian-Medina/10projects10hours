@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="style.css">
     <title>Quiz App</title>
 </head>
 <body>
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-question" id="question">Titulo</h3>
+            <ul class="card-list">
+                <li>
+                    <input type="radio" class="card-answers" id="a">
+                    <label for="a" id="answer-a">A</label>
+                </li>
+                <li>
+                    <input type="radio" class="card-answers" id="b">
+                    <label for="b" id="answer-b">B</label>
+                </li>
+                <li>
+                    <input type="radio" class="card-answers" id="c">
+                    <label for="c" id="answer-c">C</label>
+                </li>
+                <li>
+                    <input type="radio" class="card-answers" id="d">
+                    <label for="d" id="answer-d">D</label>
+                </li>
+            </ul>
+        </div>
+        <input type="submit" class="card-btn" id="submit" value="Submit">
+    </div>
     <script src="script.js"></script>
+    
 </body>
 </html>
