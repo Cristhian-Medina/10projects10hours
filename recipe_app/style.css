@@ -1,0 +1,124 @@
+* {
+    margin: none;
+    padding: none;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #3c3c3c;
+}
+
+.btn-icon {
+    height: 40px;
+    width: 40px;
+    border: none;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.main-container {
+    position: relative;
+    height: 700px;
+    width: 520px;
+    box-shadow: 0 0 20px #acacac;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    height: 100px;
+    text-align: center;
+    padding-top: 30px;
+}
+.header input {
+    height: 40px;
+    width: 240px;
+    padding: 0 10px 0 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    color: #3c3c3c;
+    background-color: #e5e5e5;
+}
+.header .btn-icon {
+    font-size: 25px;
+    color: #3c3c3c;
+}
+
+.category {
+    height: 100px;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Pattaya', sans-serif;
+    letter-spacing: 2px;
+    color: #fff;
+    background-color: turquoise;
+}
+
+.meals {
+    height: 500px;
+    width: 520px;
+    padding: 30px;
+}
+.meal-card {
+    box-shadow: 0 0 10px #acacac;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.meal-card-image {
+    height: 340px;
+    position: relative;
+}
+.meal-card-image img{
+    height: 340px;
+    width: 460px;
+    object-fit: cover;
+}
+.meal-card-image .tag{
+    position: absolute;
+    top: 30px;
+    height: 30px;
+    width: 200px;
+    border-radius: 0 5px 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    background-color: #fff;
+}
+.meal-card-body {
+    height: 100px;
+    padding: 20px;
+    display: inherit;
+    justify-content: space-between;
+    align-items: center;
+}
+.meal-card-body h4{
+    font-size: 20px;
+    font-family: 'Pattaya', sans-serif;
+    letter-spacing: 1.5px;
+    color: #b761ec;
+}
+.meal-card-body .btn-icon {
+    font-size: 24px;
+    color: #cacaca;
+}
+
+.modal {
+    display: none;
+}
+
+/* Organizar: caja, contenido, fuente, color */

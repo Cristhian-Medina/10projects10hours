@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,300&family=Pattaya&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Recipe App</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <input type="search" name="search" id="search">
+            <button class="btn-icon"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="category">
+            <h3>Favorite Meals</h3>
+            <ul class="favorites-meals"></ul>
+        </div>
+        <div class="meals">
+            <div class="meal-card">
+                <div class="meal-card-image">
+                    <img src="https://www.themealdb.com/images/media/meals/x0lk931587671540.jpg" alt="Pizza Express Margherita">
+                    <div class="tag">
+                        <h4>Miscellaneous</h4>
+                    </div>
+                </div>
+                <div class="meal-card-body">
+                    <h4>Pizza Express Margherita</h4>
+                    <button class="btn-icon"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="card">
+            <button><i class="fas fa-times" id="close"></i></button>
+            <h1 class="title">Pizza Express Margherita</h2>
+            <img src="https://www.themealdb.com/images/media/meals/x0lk931587671540.jpg" alt="Pizza Express Margherita">
+            <p class="description">1 Preheat the oven to 230°C. 2 Add the sugar and crumble the fresh yeast into warm water. 3 Allow the mixture to stand for 10 – 15 minutes in a warm place (we find a windowsill on a sunny day works best) until froth develops on the surface. 4 Sift the flour and salt into a large mixing bowl, make a well in the middle and pour in the yeast mixture and olive oil. 5 Lightly flour your hands, and slowly mix the ingredients together until they bind. 6 Generously dust your surface with flour. 7 Throw down the dough and begin kneading for 10 minutes until smooth, silky and soft. 8 Place in a lightly oiled, non-stick baking tray (we use a round one, but any shape will do!) 9 Spread the passata on top making sure you go to the edge. 10 Evenly place the mozzarella (or other cheese) on top, season with the oregano and black pepper, then drizzle with a little olive oil. 11 Cook in the oven for 10 – 12 minutes until the cheese slightly colours. 12 When ready, place the basil leaf on top and tuck in!
+            </p>
+            <h3 class="ingredients">Ingredients:</h3>
+            <ul>
+                <li>Water - 150ml</li>
+                <li>Sugar - 1 tsp</li>
+                <li>Yeast - 15g</li>
+                <li>Plain flour - 225g</li>
+                <li>Salt - 1 1/2 tsp</li>
+                <li>Olive oil - drizzle</li>
+                <li>passata - 80g</li>
+                <li>mozzarella - 70g</li>
+                <li>oregano - peeled and sliced</li>
+                <li>basil - leaves</li>
+                <li>black pepper - pinch</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
