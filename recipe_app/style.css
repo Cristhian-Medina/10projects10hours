@@ -1,3 +1,12 @@
+:root {
+    --color-primary: #b761ec;
+    --color-secondary: #40e0d0;
+    --color-dark: #3c3c3c;
+    --color-middle: #acacac;
+    --color-light: #e5e5e5;
+    --color-white: #ffffff;
+}
+
 * {
     margin: none;
     padding: none;
@@ -11,7 +20,19 @@ body {
     align-items: center;
     justify-content: center;
     font-family: 'Open Sans', sans-serif;
-    color: #3c3c3c;
+    color: var(--color-dark);
+}
+
+.hidden {
+    display: none;
+}
+
+.card {
+    box-shadow: 0 0 10px var(--color-middle);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .btn-icon {
@@ -28,7 +49,7 @@ body {
     position: relative;
     height: 700px;
     width: 520px;
-    box-shadow: 0 0 20px #acacac;
+    box-shadow: 0 0 20px var(--color-middle);
     border-radius: 5px;
     overflow: hidden;
     display: flex;
@@ -48,12 +69,12 @@ body {
     font-size: 18px;
     border: none;
     border-radius: 5px;
-    color: #3c3c3c;
-    background-color: #e5e5e5;
+    color: var(--color-dark);
+    background-color: var(--color-light);
 }
 .header .btn-icon {
     font-size: 25px;
-    color: #3c3c3c;
+    color: var(--color-dark);
 }
 
 .category {
@@ -62,21 +83,14 @@ body {
     font-size: 24px;
     font-family: 'Pattaya', sans-serif;
     letter-spacing: 2px;
-    color: #fff;
-    background-color: turquoise;
+    color: var(--color-white);
+    background-color: var(--color-secondary);
 }
 
 .meals {
     height: 500px;
     width: 520px;
     padding: 30px;
-}
-.meal-card {
-    box-shadow: 0 0 10px #acacac;
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
 }
 .meal-card-image {
     height: 340px;
@@ -97,7 +111,7 @@ body {
     justify-content: center;
     align-items: center;
     font-style: italic;
-    background-color: #fff;
+    background-color: var(--color-white);
 }
 .meal-card-body {
     height: 100px;
@@ -110,15 +124,44 @@ body {
     font-size: 20px;
     font-family: 'Pattaya', sans-serif;
     letter-spacing: 1.5px;
-    color: #b761ec;
+    color: var(--color-primary);
 }
 .meal-card-body .btn-icon {
     font-size: 24px;
-    color: #cacaca;
+    color: var(--color-middle);
 }
 
 .modal {
-    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-middle);
+}
+.modal .card {
+    height: 100vh;
+    width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    position: relative;
+    overflow-y: scroll;
+    font-size: 18px;
+    line-height: 1.7;
+    background-color: var(--color-white);
+}
+.modal .btn-icon {
+    position: absolute;
+    right: 30px;
+    font-size: 30px;
+    color: var(--color-dark);
+}
+.modal .title {
+    margin-top: 0;
+    font-family: 'Pattaya', sans-serif;
+    letter-spacing: 1.5px;
+    text-align: center;
+    color: var(--color-primary);
 }
 
 /* Organizar: caja, contenido, fuente, color */
