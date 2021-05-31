@@ -25,3 +25,5 @@ const recipes = [{
 ]
 
 const API_URL = "https://www.themealdb.com/api.php";
+
+const mealSelected = document.getElementsByClassName('');
