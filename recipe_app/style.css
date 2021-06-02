@@ -81,6 +81,7 @@ body {
 
 .category {
     min-height: 100px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -92,11 +93,15 @@ body {
     background-color: var(--color-secondary);
 }
 .favorites-meals {
-    background-color: red;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .favorites-meals li {
     height: 80px;
     width: 80px;
+    margin: 5px;
     position: relative;
     overflow: hidden;
 }
