@@ -27,7 +27,12 @@ body {
     display: none;
 }
 
-.card {
+.icon-purple-heart i {
+    color: var(--color-primary);
+}
+
+.card,
+.card-modal {
     margin: 15px;
     box-shadow: 0 0 10px var(--color-middle);
     border-radius: 10px;
@@ -49,6 +54,7 @@ body {
 .main-container {
     position: relative;
     min-height: 640px;
+    width: 370px;
     max-width: 740px;
     margin: 50px;
     box-shadow: 0 0 20px var(--color-middle);
@@ -120,6 +126,7 @@ body {
 
 .meals {
     width: 100%;
+    min-height: 470px;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -163,6 +170,30 @@ body {
     color: var(--color-middle);
 }
 
+/* --------- Tarjeta de error de carga --------- */
+.error-card {
+    width: 350px;
+    text-align: center;
+}
+.header-error {
+    padding: 70px 0;
+    font-size: 26px;
+    color: rgb(193, 0, 0);
+}
+.body-error {
+    padding: 0 20px;
+    font-size: 20px;
+}
+.body-error h4 {
+    margin-top: 20px;
+    color: var(--color-primary);
+}
+.body-error .btn-icon {
+    margin-top: 20px;
+    font-size: 40px;
+    color: var(--color-primary);
+}
+
 .modal {
     position: fixed;
     top: 0;
@@ -171,7 +202,7 @@ body {
     right: 0;
     background-color: var(--color-middle);
 }
-.modal .card {
+.card-modal {
     height: 100vh;
     max-width: 700px;
     margin: 0 auto;
@@ -189,7 +220,7 @@ body {
     color: var(--color-dark);
 }
 .modal .title {
-    margin-top: 0;
+    margin-right: 30px;
     font-family: 'Pattaya', sans-serif;
     letter-spacing: 1.5px;
     text-align: center;
